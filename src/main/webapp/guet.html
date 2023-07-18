@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>guet</title>
+    <LINK rel="stylesheet" type="text/css" href="../css/index.css"><!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script>
+        $(document).ready(function (){
+            //发请求获取新闻内容（桂电要闻）
+            $.getJSON("http://localhost:8080/listImportantNews.do",
+                {
+                },(listImportantNewsData)=>{
+                    let listImportantNews = listImportantNewsData.data;
+                    for (let i=0;i<listImportantNews.length;i++){
+                        //循环放入标题
+                            let titleList = $('.plate1_a>h1');
+                            titleList[i].innerHTML=listImportantNews[i].title;
+                        //循环放入图片
+                            let imgList = $('.plate1_a>img');
+                            //获取图片的正则表达式
+                            let imgReg = new RegExp("(<img\\s.*?/>)");
+                            imgReg.exec(listImportantNews[i].content);
+                            let imgReg_src = new RegExp("(\"(.*)\")");
+                            imgReg_src.exec(RegExp.$1);
+                            imgList[i].src = RegExp.$2;
+                        //循环放入内容
+                            let pList = $('.plate1_a>p');
+                            let pReg = new RegExp("(<p>(.*?)</p>)");
+                            pReg.exec(listImportantNews[i].content);
+                            pList[i].innerHTML=RegExp.$2;
+                            if (RegExp.$2.length<100) {
+                                let newPReg = new RegExp("(<p>(.*)</p>)");
+                                newPReg.exec(listImportantNews[i].content);
+                                pReg.exec(RegExp.$2);
+                                pList[i].innerHTML=RegExp.$2;
+                            }
+                        //循环超链接点击事件
+                            let aList = $('.plate1_a');
+                            $(aList[i]).click(function (){
+                                localStorage.setItem("currentId",listImportantNews[i].id);
+                            })
+                    }
+
+                })
+        })
+    </script>
+    <!--
+    float布局
+    position布局
+    弹性盒子（flex布局）
+    外层用relative，内层用absolute
+    -->
+</head>
+<body>
+    <div id="footer_img"></div>
+    <header>
+        <div id="top">
+            <img src="../png/logo.png" alt="">
+            <div id="div_top_select">
+                <a href="">【校内主页】</a>
+                <a href="">【邮箱登录】</a>
+                <a href="">【智慧校园】</a>
+                <br>
+                <input type="select" id="top_select" placeholder="查询关键字" >
+            </div>
+        </div>
+
+        <nav>
+            <ul class="first">
+                <li class="first_li"><a href="#">首页</a></li>
+                <li class="first_li">
+                    <a href="#">学校简介</a>
+                    <ul class="second">
+                        <li class="second_li"><a href="#" class="second_a">现任领导</a></li>
+                        <li class="second_li"><a href="#" class="second_a">历任书记院长</a></li>
+                        <li class="second_li"><a href="#" class="second_a">学校概况</a></li>
+                        <li class="second_li"><a href="#" class="second_a">历史沿革</a></li>
+                        <li class="second_li"><a href="#" class="second_a">校标、校训</a></li>
+                        <li class="second_li"><a href="#" class="second_a">校徽</a></li>
+                    </ul>
+                </li>
+                <li class="first_li">
+                    <a href="">机构设置</a>
+                    <ul class="second">
+                        <li class="second_li"><a href="" class="second_a">党群部门</a></li>
+                        <li class="second_li"><a href="" class="second_a">行政管理部门</a></li>
+                        <li class="second_li"><a href="" class="second_a">教学单位</a></li>
+                        <li class="second_li"><a href="" class="second_a">其他机构</a></li>
+                        <li class="second_li"><a href="" class="second_a">科研机构</a></li>
+                    </ul>
+                </li>
+                <li class="first_li"><a href="">师资队伍</a></li>
+                <li class="first_li"><a href="">科学研究</a></li>
+                <li class="first_li"><a href="#">国际交流</a></li>
+                <li class="first_li"><a href="#">招生就业</a></li>
+                <li class="first_li"><a href="#">北海校区</a></li>
+                <li class="first_li"><a href="#">一流专业</a></li>
+                <li class="first_li"><a href="#">诚聘英才</a></li>
+                <li class="first_li"><a href="#">人才培养</a></li>
+                <li class="first_li"><a href="#">常用链接</a></li>
+            </ul>
+        </nav>
+        <!-- 轮播图 -->
+        <div id="loopPic">
+            <div id="loopPic_main">
+                <a href="#">
+                    <img id="Pic" src="" alt="" >
+                </a>
+                <a href="#" id="l-btn" class="btn" onclick="loopLeft(window.event)">
+                    <img src="png\l-btn.png" alt="">
+                </a>
+                <a href="#" id="r-btn" class="btn" onclick="loopRight()">
+                    <img src="png\r-btn.png" alt="">
+                </a>
+            </div>
+
+            <!--阻止超链接的默认行为-->
+            <!--
+            <a href="#" id="l-btn" class="btn" onclick="loopLeft(window.event)">
+                <img src="png\l-btn.png" alt="">
+            </a>
+            -->
+            <!--底部轮播点-->
+            <div id="item">
+                <a class="item" id="item1"></a>
+                <a class="item" id="item2"></a>
+                <a class="item" id="item3"></a>
+                <a class="item" id="item4"></a>
+                <a class="item" id="item5"></a>
+            </div>
+        </div>
+        <script>
+            /*
+            * 网页打开后，显示第一个图片
+            * 用window.onload
+            */
+            window.onload=function (){
+                //仅执行一次
+                document.getElementById("Pic").src=looppic[0];
+                document.getElementById("l-btn").onclick=loopLeft;
+            }
+
+            var looppic = new Array("../png/1.jpg","../png/2.jpg","../png/3.jpg","../png/4.jpg","../png/5.jpg");
+            var looppic_i = 0;
+            function loopLeft(e){
+                e.preventDefault();//默认行为已阻止
+                console.log("点击左按钮。。");
+                if(looppic_i==0)looppic_i=5;
+                looppic_i-=1;
+                document.getElementById("Pic").src=looppic[looppic_i];
+            }
+            function loopRight(){
+                console.log("点击右按钮。。");
+                if(looppic_i==4)looppic_i=-1;
+                looppic_i+=1;
+                document.getElementById("Pic").src=looppic[looppic_i];
+            }
+            /* 定时任务 */
+            /*setTimeout(function (){
+                console.log("这是过五秒执行一次的函数");
+            },5000)*/
+            setTimeout(f1,5000);
+            function f1(){
+            }
+            /*轮播图继续自动轮换*/
+            interval=setInterval(()=>{
+                if(looppic_i==4)looppic_i=-1;
+                looppic_i+=1;
+                document.getElementById("Pic").src=looppic[looppic_i];
+            },3000);
+
+            function cancle(){
+                clearInterval(interval);
+            }
+            /*鼠标悬停，轮播图不再轮换*/
+            document.getElementById("Pic").addEventListener("mouseover",function (){
+                cancle();
+            })
+            /*鼠标移出之后，轮播图继续自动轮换*/
+            document.getElementById("Pic").addEventListener("mouseout",function (){
+                interval=setInterval(()=>{
+                    if(looppic_i==4)looppic_i=-1;
+                    looppic_i+=1;
+                    document.getElementById("Pic").src=looppic[looppic_i];
+                },3000);
+            })
+
+            /* 下面是轮播图底部轮播点 */
+            var item_lable = "item";
+            setInterval(()=>{
+                var looppic_ii=looppic_i+1;
+                item_lable=item_lable+looppic_ii;
+                document.getElementById(item_lable).style.backgroundColor = 'lightgray';
+                for (var i=1;i<=5;i++){
+                    if(i!=looppic_ii) {
+                        item_lable="item";
+                        item_lable = item_lable + i;
+                        document.getElementById(item_lable).style.backgroundColor = 'darkgray';
+                    }
+                }
+                item_lable="item";
+            },1);
+            /*点击对应轮播点的函数*/
+            var item = document.getElementsByClassName("item");
+            for (var i = 0; i < 5; i++) {
+                item[i].onmouseenter=function (){
+                    document.getElementById("Pic").src=looppic[this.id[4]-1];
+                    looppic_i=this.id[4]-1;
+                }
+            }
+
+        </script>
+
+    </header>
+    <!-- 官网的主体内容 -->
+    <div id="content">
+        <div id="plate_1">
+            <div id="p1_header" class="p_header"><ul><li><a href="">桂电要闻</a></li></ul></div>
+            <div id="p1_a1" class="plate1_a_div">
+                <a href="page.html" class="plate1_a" target="_blank">
+                    <img src="" alt="">
+                    <h1 class="text"></h1>
+                    <p class="text"></p>
+                </a>
+            </div>
+            <div id="p1_a2" class="plate1_a_div">
+                <a href="page.html" class="plate1_a" target="_blank">
+                    <img src="" alt="">
+                    <h1 class="text"></h1>
+                    <p class="text"></p>
+                </a>
+            </div>
+            <div id="p1_a3" class="plate1_a_div">
+                <a href="page.html" class="plate1_a" target="_blank">
+                    <img src="" alt="">
+                    <h1 class="text"></h1>
+                    <p class="text"></p>
+                </a>
+            </div>
+        </div>
+
+        <div id="plate_2">
+            <div id="p2_header" class="p_header"><ul class="p_float_header_ul">
+                <li><a href="">桂电新闻</a></li>
+                <li><a href="">校园快讯</a></li>
+                <li><a href="">学院动态</a></li>
+                <li><a href="">媒体桂电</a></li></ul>
+            </div>
+            <div id="p2_list">
+                <ul>
+                    <li id="p2_list_1" class="p_list_a">
+                        <a href=""><span>05-10</span><span> 校长徐华蕊率队到浙江三所研究院调研（图）</span></a>
+                        <a href=""><span>05-06</span><span> 【主题教育】我校举行学习贯彻习近平新时代中国特色社会主义思想主题教育读书班第二专题学习暨校党委理论学习中心组（扩大）2023年第三次学习会（图）</span></a>
+                        <a href=""><span>05-06</span><span> 【主题教育】我校举行学习贯彻习近平新时代中国特色社会主义思想主题教育读书班第一专题学习暨校党委理论学习中心组（扩大）2023年第二次学习会（图）</span></a>
+                        <a href=""><span>05-06</span><span> 我校召开第五届教职工暨第四届工会会员代表大会第五次会议（图）</span></a>
+                        <a href=""><span>05-04</span><span> 【主题教育】我校学习贯彻习近平新时代中国特色社会主义思想主题教育读书班开班(图）</span></a>
+                        <a href=""><span>05-04</span><span> 【主题教育】我校举办学习贯彻习近平新时代中国特色社会主义思想主题教育读书班专题辅导报告会（图）</span></a>
+                        <a href=""><span>04-29</span><span> 我校青年教师王万奇荣获第二十六届“广西青年五四奖章”(图）</span></a>
+                        <a href=""><span>04-28</span><span> 我校召开学科学术委员会会议（图）</span></a>
+                        <a href=""><span>04-28</span><span> 柬埔寨国立马德望大学孔子学院2023年理事会顺利召开(图）</span></a>
+                        <a href=""><span>04-26</span><span> 泰国北柳府挽卡市市长森里差·蓬博炯一行来校访问交流(图）</span></a>
+                        <a href=""><span>04-25</span><span> 我校举办第三届教师教学创新大赛（图）</span></a>
+                        <a href=""><span>04-24</span><span> 越南河内工业大学党委书记、董事会主席黎红军一行来校访问(图）</span></a>
+                    </li>
+                    <li class="p_list_a"></li>
+                    <li class="p_list_a"></li>
+                    <li class="p_list_a"></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="plate_3">
+            <div id="p3_header" class="p_header"><ul class="p_float_header_ul">
+                <li><a href="">通知公告</a></li>
+                <li><a href="">招标公示</a></li></ul>
+            </div>
+            <div id="p3_list">
+                <ul>
+                    <li class="p_list_a">
+                        <a href=""><span style="color: #428bca">●&nbsp;03-27</span><span>关于做好2023年上半年全国大学英语四、六级考试和高校英语应用能力B级考试报名工作的通知</span></a>
+                        <a href=""><span style="color: #428bca">●&nbsp;04-27</span><span>关于广西桂林电子科技大学教育发展基金会获得2023年-2025年公益性捐赠税前扣除资格的通告</span></a>
+                        <a href=""><span style="color: #428bca">●&nbsp;04-22</span><span>桂林电子科技大学2022年心理健康教育专职教师招聘拟聘人员公示</span></a>
+                        <a href=""><span style="color: #428bca">●&nbsp;04-20</span><span>桂林电子科技大学2023年校医院医务工作人员招聘面试成绩及考核公示</span></a>
+                        <a href=""><span style="color: #428bca">●&nbsp;04-19</span><span>桂林电子科技大学2022年非实名人员控制数工作人员公开招聘拟聘用人员公示</span></a>
+                        <a href=""><span style="color: #428bca">●&nbsp;04-19</span><span>桂林电子科技大学2023年南宁研究院专职辅导员招聘面试成绩及考核公示</span></a>
+                        <a href=""><span style="color: #428bca">●&nbsp;04-12</span><span>桂林电子科技大学2023年南宁研究院专职辅导员招聘笔试成绩公布及面试公告</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="plate_4">
+            <div id="p4_header" class="p_header">
+                <span>学术活动</span>
+                <a href="">更多>></a>
+            </div>
+            <div id="p4_list">
+                <ul>
+                    <li><img src=" " alt="">
+                        <a href=""><span>关于兰州大学王育华教授来校作学术报告的预告<br>时间：2023年5月16日（周二）上午9:30-11:30 &nbsp;&nbsp; 地点：花江校区第一教学楼1106会议室 </span></a>
+                    </li>
+                    <li><img src=" " alt="">
+                        <a href=""><span>关于南京航空航天大学范华林教授来校作学术报告的预告<br>时间：2023年5月11日（星期四）下午14:30 &nbsp;&nbsp; 地点：花江校区机电大楼108会议室 </span></a>
+                    </li>
+                    <li><img src=" " alt="">
+                        <a href=""><span>关于元宇宙与数字文旅论坛的预告<br>时间：2023年5月8日（周一）上午09:00 &nbsp;&nbsp; 地点：金鸡岭校区图书馆305室 </span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="plate_5">
+            <div id="p5_header" class="p_header">
+                <span>专题网站</span>
+            </div>
+            <div id="p5_list">
+                <a href=""><img src=" " alt=""><br><p>深入学习贯彻党的二十大精神专题网站</p></a>
+                <a href=""><img src=" " alt=""><br><p>中国共产党桂林电子科技大学第四次代表大会</p></a>
+                <a href=""><img src=" " alt=""><br><p>全国文明校园建设网</p></a>
+                <a href=""><img src=" " alt=""><br><p>桂林电子科技大学党建成果网上展馆</p></a>
+            </div>
+        </div>
+
+        <div id="plate_6">
+            <div id="p6_1"><a href=""><img src=" " alt=""></a></div>
+            <div id="p6_2">
+                <ul>
+                    <li><a href="">校外VPN访问</a></li>
+                    <li><a href="">桂林电子科技大学学报</a></li>
+                    <li><a href="">漓江学堂</a></li>
+                    <li><a href="">我要举报</a></li>
+                    <li><a href="">信息公开网</a></li>
+                </ul>
+            </div>
+            <div id="p6_3">
+                <a href=""><img src=" " alt=""><p>官方微信</p></a>
+                <a href=""><img src=" " alt=""><p>官方微博</p></a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div id="footer">
+        </div>
+    </footer>
+
+</body>
+</html>

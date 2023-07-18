@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #main{
+            border: cornflowerblue solid 1px;
+            width: 400px;
+            height: 300px;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        #username{
+            position: absolute;
+            top: 80px;
+            left: 100px;
+            height: 30px;
+        }
+        #password{
+            position: absolute;
+            top: 120px;
+            left: 100px;
+            height: 30px;
+        }
+        #login{
+            position: absolute;
+            top: 180px;
+            left: 140px;
+            height: 50px;
+            width: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="username">
+            <pre>用户名</pre><input type="text">
+        </div>
+        <div id="password">
+            <pre>密 码</pre><input type="text">
+        </div>
+        <div id="login">
+            <button id="loginButton" onclick="loginButton()">登 录</button>
+        </div>
+    </div>
+
+    <script>
+        function loginButton(){
+            let username = $('#username>input').val();
+            let password = $('#password>input').val();
+            //发请求登录
+            $.ajax({
+                url: "http://localhost:8080/login.do",
+                data: JSON.stringify({"username":username,"password":password}),
+                method: "post",
+                dataType: "json",
+                contentType: 'application/json',
+                success: function (data) {
+                    console.log(data)
+                    if (data.data=="true") {
+                        window.open("index.html");
+                        localStorage.setItem("username",username);
+                    }
+                }
+            });
+        }
+
+
+    </script>
+</body>
+</html>

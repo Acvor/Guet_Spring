@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans>
+    <bean id="planDesignController" class="cn.edu.guet.controller.PlanDesignController">
+        <property name="planDesignService" ref="planDesignService"></property>
+    </bean>
+
+    <bean id="planDesignService" class="cn.edu.guet.service.impl.PlanDesignServiceImpl">
+        <property name="routeCableDao" ref="routeCableDao"></property>
+        <property name="infoDao" ref="infoDao"></property>
+    </bean>
+
+    <bean id="routeCableDao" class="cn.edu.guet.dao.impl.RouteCableDaoImpl"></bean>
+    <bean id="infoDao" class="cn.edu.guet.dao.impl.PlanDesignInfoDaoImpl"></bean>
+
+    <bean id="uploadController" class="cn.edu.guet.controller.UploadController"></bean>
+
+    <bean id="newsController" class="cn.edu.guet.controller.NewsController"></bean>
+
+    <bean id="userController" class="cn.edu.guet.controller.UserController"></bean>
+
+</beans>

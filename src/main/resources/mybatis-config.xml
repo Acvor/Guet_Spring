@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <properties resource="db.properties"/>
+    <environments default="">
+        <environment id="">
+            <transactionManager type="JDBC"></transactionManager>
+            <dataSource type="POOLED">
+                <!--登录信息：链接哪一种数据库、url地址、用户名和密码 -->
+                <property name="driver" value="${driver}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${user}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper resource="mapper/PlanDesignInfoMapper.xml"></mapper>
+        <mapper resource="mapper/PlanDesignHistoryRecordMapper.xml"></mapper>
+        <mapper resource="mapper/PlanDesignBusinessRouteMapper.xml"></mapper>
+        <mapper resource="mapper/PlanDesignPhysicsRouteMapper.xml"></mapper>
+        <mapper resource="mapper/PlanDesignExcelRecordMapper.xml"></mapper>
+        <mapper resource="mapper/PlanDesignConsistencyResultMapper.xml"></mapper>
+        <mapper resource="mapper/PlanDesignCadDrawingMapper.xml"></mapper>
+        <mapper resource="mapper/PlanDesignRouteCableMapper.xml"></mapper>
+        <mapper resource="mapper/NewsMapper.xml"></mapper>
+        <mapper resource="mapper/PermissionMapper.xml"></mapper>
+        <mapper resource="mapper/RoleMapper.xml"></mapper>
+        <mapper resource="mapper/UserMapper.xml"></mapper>
+    </mappers>
+</configuration>

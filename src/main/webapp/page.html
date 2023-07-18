@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script>
+        $(document).ready(function (){
+            //拿到跳转的id
+            let id = localStorage.getItem("currentId");
+            //发请求获取新闻内容
+            $.getJSON("http://localhost:8080/viewNews.do",
+                {
+                    id
+                },(newsData)=>{
+                    console.log(newsData.data)
+                let news = $('#news');
+                news.append(newsData.data.title);
+                //主动加入分割线和日期
+                news.append($('<hr/><br>'));
+                news.append('发布时间：'+newsData.data.createTime);
+                news.append($('<br><br>'));
+                //去掉分割线
+                    let hrReg = new RegExp("(<hr/>(.*))");
+                    hrReg.exec(newsData.data.content);
+                news.append(RegExp.$2);
+                news.append($('<br><br><br><br><br><br><br><br><br><br><br><br><hr/>'))
+                })
+        })
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #wrapper{
+            display: flex;
+            flex-direction: column;
+        }
+        #main_top{
+            height: 200px;
+        }
+        #main{
+            display: flex;
+            height: 70%;
+        }
+        #aside{
+            flex: 2;
+            left: 200px;
+        }
+        #newsStyle{
+            flex: 8;
+        }
+        #news{
+            padding-left: 100px;
+            padding-right: 300px;
+        }
+
+
+
+        #top>img{
+            width: 442px;
+            height: 72px;
+            left: 200px;
+        }
+        #top{
+            width: 1280px;
+            margin: 0 auto;
+        }
+        #div_top_select{
+            float: right;
+            position: relative;
+            top: 40px;
+        }
+        #div_top_select a{
+            font-size: 15px;
+            text-decoration: none;
+            color: #eeefef;
+        }
+
+        .dibu {
+            min-height: 140px;
+            padding-top: 35px;
+        }
+        .dibu1 {
+            width: 1280px;
+            margin: auto;
+            height: 100%;
+            position: relative;
+        }
+        .dbbq {
+            font-size: 14px;
+            text-align: center;
+            margin-top: 1px;
+        }
+        .dibu3 {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .clearfix {
+            display: block;
+            *zoom: 1;
+        }
+        .clearfix:after {
+            clear: both;
+            content: ".";
+            display: block;
+            height: 0;
+            visibility: hidden;
+        }
+        .blue_error2 {
+            position: absolute;
+            right: 210px;
+            top: -10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="main_top">
+            <div id="top">
+                <img src="../png/logo.png" alt="">
+                <div id="div_top_select">
+                    <a href="">【校内主页】</a>
+                    <a href="">【邮箱登录】</a>
+                    <a href="">【智慧校园】</a>
+                    <br>
+                    <input type="select" id="top_select" placeholder="查询关键字" >
+                </div>
+            </div>
+
+            <nav>
+                <ul class="first">
+                    <li class="first_li"><a href="#">首页</a></li>
+                    <li class="first_li">
+                        <a href="#">学校简介</a>
+                        <ul class="second">
+                            <li class="second_li"><a href="#" class="second_a">现任领导</a></li>
+                            <li class="second_li"><a href="#" class="second_a">历任书记院长</a></li>
+                            <li class="second_li"><a href="#" class="second_a">学校概况</a></li>
+                            <li class="second_li"><a href="#" class="second_a">历史沿革</a></li>
+                            <li class="second_li"><a href="#" class="second_a">校标、校训</a></li>
+                            <li class="second_li"><a href="#" class="second_a">校徽</a></li>
+                        </ul>
+                    </li>
+                    <li class="first_li">
+                        <a href="">机构设置</a>
+                        <ul class="second">
+                            <li class="second_li"><a href="" class="second_a">党群部门</a></li>
+                            <li class="second_li"><a href="" class="second_a">行政管理部门</a></li>
+                            <li class="second_li"><a href="" class="second_a">教学单位</a></li>
+                            <li class="second_li"><a href="" class="second_a">其他机构</a></li>
+                            <li class="second_li"><a href="" class="second_a">科研机构</a></li>
+                        </ul>
+                    </li>
+                    <li class="first_li"><a href="">师资队伍</a></li>
+                    <li class="first_li"><a href="">科学研究</a></li>
+                    <li class="first_li"><a href="#">国际交流</a></li>
+                    <li class="first_li"><a href="#">招生就业</a></li>
+                    <li class="first_li"><a href="#">北海校区</a></li>
+                    <li class="first_li"><a href="#">一流专业</a></li>
+                    <li class="first_li"><a href="#">诚聘英才</a></li>
+                    <li class="first_li"><a href="#">人才培养</a></li>
+                    <li class="first_li"><a href="#">常用链接</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="main">
+            <div id="aside">
+            </div>
+            <div id="newsStyle">
+                <div id="news">
+                    <!--留白，从数据库取-->
+                </div>
+            </div>
+        </div>
+
+        <div class="dibu clearfix" style="height: 10%;background: url('../png/footer.png');">
+            <div class="dibu1 clearfix">
+                <div class="dbbq">©版权所有：桂林电子科技大学　校址：中国广西桂林金鸡路1号　邮编：541004　传真：0773-2290083</div>
+                <div class="dibu3" frag="窗口013">
+                    <a href="https://beian.miit.gov.cn/" target="_blank" style="text-align: center;">桂ICP备05000961号</a>
+                    <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=45030502000232" style="text-align: center; display: inline-block; text-decoration-line: none; height: 20px; line-height: 20px;">
+                        <img src="https://www.guet.edu.cn/_upload/tpl/00/0d/13/template13/htmlRes/DC0A46FC5B15B3363FFA78CF6C7_C267B386_4B38.png">桂公网安备45030502000232号</a>
+
+                    <a class="dbtp" href="https://www.12377.cn/" target="_blank" style="text-align: center;"><img src="https://www.guet.edu.cn//_upload/article/images/31/f8/1533485d4b13adae2c1873ac66ea/71c19aff-586c-4b19-9ca2-0fa8f43f63ca.jpg" height="46" style=" height: 46px;"></a>
+
+                    <a class="dbtp" href="https://www.12377.cn/" target="_blank" style="text-align: center;"><img src="https://www.guet.edu.cn//_upload/article/images/3d/59/e168ffcd490db8e74f95ef6f889e/33ee3336-46c1-4762-9392-73577681e792.jpg" height="46" style=" height: 46px;"></a>
+
+                    <a class="dbtp" href="javascript:void(0);" target="_blank" style="text-align: center;"><img src="https://www.guet.edu.cn//_upload/article/images/8a/9b/2e0ec95448f7bb707b629f75a922/74606781-3865-4c69-bf9e-57dd6ef18230.jpg" height="46" style=" height: 46px;"></a>
+
+                </div>
+                <a class="blue_error2" href="http://bszs.conac.cn/sitename?method=show&amp;id=17A7818D2EE94AB9E053012819ACB5C4" target="_blank"><img alt="" src="https://www.guet.edu.cn//_upload/tpl/00/0d/13/template13/htmlRes/blue_error.png" width="80" height="80"> </a> </div>
+        </div>
+    </div>
+</body>
+</html>

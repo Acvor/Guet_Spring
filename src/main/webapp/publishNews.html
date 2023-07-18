@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="../js/wangEditor.min.js"></script>
+    <script>
+        // ajax去后台发请求，拿到某个新闻的内容，然后使用JavaScript动态的修改网页内容
+
+    </script>
+    <style>
+        .w-e-text-container{
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+<form method="post" action="saveNews.do">
+    <div style="height: 100%">
+        <br/>
+        <div id="intro" class="TextContent" style="height: 100%"></div>
+        <textarea style="display: none" name="mytxtIntro" id="txtIntro"></textarea>
+        新闻类别：
+        <label><input type="radio" name="type" value="1">要闻</label>
+        <label><input type="radio" name="type" value="2">快讯</label>
+        <input class="btn btn-primary" id="sub" type="submit" value="确认提交">
+    </div>
+</form>
+</body>
+<script type="text/javascript">
+    var E = window.wangEditor;
+    var editor = new E('#intro');
+    //    获取隐藏控件<textarea>的id，用于显示内容，也方便后台获取内容
+    var $text1 = $('#txtIntro');
+    editor.config.onchange = function (html) {
+        $text1.val(html);
+    }
+    //    设置上传本地图片到服务器
+    editor.config.uploadImgServer = 'upload.do';
+
+    editor.create();
+    $text1.val(editor.txt.html());// 初始化 textarea 的值
+</script>
+</html>

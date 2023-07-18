@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>后端管理</title>
+    <link rel="stylesheet" href="css/side.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            //获取当前用户名
+            let username = localStorage.getItem("username");
+            //根据用户名获取权限
+            $.getJSON("http://localhost:8080/getPermissionsByUsername.do",
+                {
+                    username:username
+                },(data)=>{
+                    let permission = data.data;
+                    let firstMenu = new Array();
+                    let secondMenu = new Array();
+                    for (let i=0;i<permission.length;i++){
+                        if (permission[i].isParent=="true") {
+                            firstMenu[firstMenu.length] = permission[i];
+                        } else secondMenu[secondMenu.length] = permission[i];
+                    }
+                    console.log(firstMenu)
+                    console.log(secondMenu)
+                    //动态创建菜单
+                    let menu = $(".menu");
+                    //循环一级菜单
+                    for (let i=0;i<firstMenu.length;i++) {
+                        //建立一级菜单的各个属性
+                        let firstA = $("<a>").attr("href",firstMenu[i].url).attr("target",firstMenu[i].target);
+                        let firstIcon = $("<i>").attr("class",firstMenu[i].icon);
+                        firstA.append(firstIcon).append(firstMenu[i].permissionName);
+                        let firstLi = $("<li>").append(firstA);
+                        //循环二级菜单，拿到属于该一级菜单的二级菜单
+                        let secondToFirst = new Array();
+                        for (let j=0;j<secondMenu.length;j++){
+                            if (secondMenu[j].parentPermissionId==firstMenu[i].permissionId)
+                                secondToFirst[secondToFirst.length] = secondMenu[j];
+                        }
+                        //如果有二级菜单
+                        if (secondToFirst.length!=0) {
+                            //循环属于该一级菜单的二级菜单，建立ul
+                            let secondUl = $("<ul>").attr("class", "submenu").attr("style", "display:none;");
+                            for (let k = 0; k < secondToFirst.length; k++) {
+                                let secondA = $("<a>").attr("href", secondToFirst[k].url).attr("target", secondToFirst[k].target).append(secondToFirst[k].permissionName);
+                                let secondLi = $("<li>").append(secondA);
+                                secondUl.append(secondLi);
+                            }
+                            //给一级菜单加上二级菜单
+                            firstLi.append(secondUl);
+                        }
+                        //加上一级菜单
+                        menu.append(firstLi);
+                        //给一级菜单加点击事件
+                        firstA.click(function(){
+                            $(this).next().toggle(300);
+                            $(this).parent().siblings().children(".submenu").hide(300);
+                        })
+                    }
+
+                })
+        })
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #wrapper{
+            display: flex;
+            flex-direction: column;
+            height: 1000px;
+        }
+        #top{
+            flex: 1;
+            border-bottom: 1px solid ;
+        }
+        #main{
+            flex: 9;
+            display: flex;
+            flex-direction: row;
+        }
+        #aside{
+            flex: 2;
+            border: 1px solid gray;
+        }
+        #article{
+            flex: 8;
+        }
+    </style>
+</head>
+<body>
+<!--弹性布局(子元素如何分布)-->
+<div id="wrapper">
+    <div id="top">
+        top
+    </div>
+    <div id="main">
+        <div id="aside">
+            <ul class="menu">
+
+            </ul>
+        </div>
+        <div id="article">
+            <iframe src="" frameborder="0" width="100%" height="100%" name="content">
+
+            </iframe>
+        </div>
+    </div>
+</div>
+</body>
+</html>

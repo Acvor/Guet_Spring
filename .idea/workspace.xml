@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="GROUP_BY_SEVERITY" value="true" />
+  </component>
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Guet_Spring:war" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="77272ff9-72ae-472a-8b39-1585fecd1d9b" name="Default Changelist" comment="完善了根据创建时间查询的BUG">
+      <change afterPath="$PROJECT_DIR$/.idea/mybatisx/templates.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/bean/News.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/bean/NewsExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/bean/Permission.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/bean/PermissionExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/bean/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/bean/RoleExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/bean/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/bean/UserExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/controller/NewsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/controller/UploadController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/mapper/NewsMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/mapper/PermissionMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/mapper/RoleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/util/WangEditor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/NewsMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/PermissionMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/RoleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/font-awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/side.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/guet.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index02.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-3.6.0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/wangEditor.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/png/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/png/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/png/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/png/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/png/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/png/5FFCC15278F3C1C86ED0C787F8A_1E706291_196C3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/png/79320259db5119a5.jpg.avif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/png/8d0bfc2b0e77d9a3.jpg.avif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/png/b33bcfa17f953914.jpg.avif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/png/bg-top.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/png/content-footer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/png/footer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/png/l-btn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/png/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/png/r-btn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/png/wallhaven-0p22jp.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/png/zhuanquan.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/publishNews.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e13d42bf-3241-43b9-b980-703f0786b489.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e13d42bf-3241-43b9-b980-703f0786b489.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e13d42bf-3241-43b9-b980-703f0786b489/entities/entities.dat" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e13d42bf-3241-43b9-b980-703f0786b489/entities/entities.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e13d42bf-3241-43b9-b980-703f0786b489/entities/entities.dat.values" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e13d42bf-3241-43b9-b980-703f0786b489/entities/entities.dat.values" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e13d42bf-3241-43b9-b980-703f0786b489/entities/entities.dat.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e13d42bf-3241-43b9-b980-703f0786b489/entities/entities.dat.values.at" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e13d42bf-3241-43b9-b980-703f0786b489/entities/entities.dat.values.s" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e13d42bf-3241-43b9-b980-703f0786b489/entities/entities.dat.values.s" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e13d42bf-3241-43b9-b980-703f0786b489/entities/entities.dat_i" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e13d42bf-3241-43b9-b980-703f0786b489/entities/entities.dat_i" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/bean/CadData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/bean/CadResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/bean/Page.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/bean/PlanDesignBusinessRoute.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/bean/PlanDesignBusinessRouteExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/bean/PlanDesignCadDrawing.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/bean/PlanDesignCadDrawingExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/bean/PlanDesignConsistencyResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/bean/PlanDesignConsistencyResultExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/bean/PlanDesignDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/bean/PlanDesignExcelRecord.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/bean/PlanDesignExcelRecordExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/bean/PlanDesignHistoryRecord.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/bean/PlanDesignHistoryRecordExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/bean/PlanDesignInfoAnalyse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/bean/PlanDesignPhysicsRoute.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/bean/PlanDesignPhysicsRouteExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/bean/PlanDesignRouteCable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/bean/PlanDesignRouteCableExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/bean/PlanDesignRouteCable_old.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/bean/PlanDesigninfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/bean/RelayDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/bean/RelayDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/controller/PlanDesignController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/dao/PlanDesignHistoryRecordDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/dao/PlanDesignInfoDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/dao/RouteCableDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/dao/impl/BaseDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/dao/impl/BaseDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/dao/impl/PlanDesignHistoryRecordDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/dao/impl/PlanDesignInfoDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/dao/impl/RouteCableDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/mapper/PlanDesignBusinessRouteMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/mapper/PlanDesignCadDrawingMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/mapper/PlanDesignConsistencyResultMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/mapper/PlanDesignExcelRecordMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/mapper/PlanDesignHistoryRecordMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/mapper/PlanDesignInfoMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/mapper/PlanDesignPhysicsRouteMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/mapper/PlanDesignRouteCableMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/mvc/DispatcherServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/mvc/DispatcherServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/service/PlanDesignHistoryRecordService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/service/PlanDesignService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/service/impl/PlanDesignHistoryRecordServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/service/impl/PlanDesignServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/util/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/util/Generator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/PlanDesignBusinessRouteMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/PlanDesignCadDrawingMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/PlanDesignConsistencyResultMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/PlanDesignExcelRecordMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/PlanDesignHistoryRecordMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/PlanDesignInfoMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/PlanDesignPhysicsRouteMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/PlanDesignRouteCableMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/bean/PlanDesignRouteCable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/bean/PlanDesignRouteCable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/bean/PlanDesigninfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/bean/PlanDesigninfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/common/ResponseData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/common/ResponseData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/common/ResponseRecode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/common/ResponseRecode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/controller/PlanDesignController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/controller/PlanDesignController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/dao/BaseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/dao/BaseDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/dao/PlanDesignInfoDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/dao/PlanDesignInfoDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/dao/RouteCableDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/dao/RouteCableDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/dao/impl/BaseDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/dao/impl/BaseDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/dao/impl/BaseDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/dao/impl/BaseDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/dao/impl/PlanDesignInfoDaoImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/dao/impl/PlanDesignInfoDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/dao/impl/RouteCableDaoImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/dao/impl/RouteCableDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/ioc/BeanFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/ioc/BeanFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/mvc/ContextConfigListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/mvc/ContextConfigListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/mvc/ControllerMapping.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/mvc/ControllerMapping.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/mvc/DispatcherServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/mvc/DispatcherServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/mvc/DispatcherServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/mvc/DispatcherServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/service/PlanDesignService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/service/PlanDesignService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/service/impl/PlanDesignServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/service/impl/PlanDesignServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/guet/util/DBConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/guet/util/DBConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/springmvc.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/springmvc.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/bean/PlanDesignRouteCable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/bean/PlanDesignRouteCable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/bean/PlanDesigninfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/bean/PlanDesigninfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/common/ResponseData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/common/ResponseData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/common/ResponseRecode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/common/ResponseRecode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/controller/PlanDesignController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/controller/PlanDesignController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/dao/BaseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/dao/BaseDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/dao/PlanDesignInfoDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/dao/PlanDesignInfoDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/dao/impl/BaseDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/dao/impl/BaseDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/dao/impl/BaseDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/dao/impl/BaseDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/dao/impl/PlanDesignInfoDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/dao/impl/PlanDesignInfoDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/ioc/BeanFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/ioc/BeanFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/mvc/ContextConfigListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/mvc/ContextConfigListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/mvc/ControllerMapping.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/mvc/ControllerMapping.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/mvc/DispatcherServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/mvc/DispatcherServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/mvc/DispatcherServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/mvc/DispatcherServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/service/PlanDesignService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/service/PlanDesignService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/service/impl/PlanDesignServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/service/impl/PlanDesignServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/service/impl/PlanDesignServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/service/impl/PlanDesignServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/util/DBConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/springmvc/WEB-INF/classes/cn/edu/guet/util/DBConnection.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="AnnotationType" />
+        <option value="Jsp File" />
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Hgs_MyBatis" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="/Applications/apache-maven-3.8.4" />
+        <option name="userSettingsFile" value="/Applications/apache-maven-3.8.4/conf/settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="2" />
+  </component>
+  <component name="ProjectId" id="1h4ToCBdbZM7uJfUYYthyIiZDM1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="MyBatisLogPluginparameters" value="Parameters:" />
+    <property name="MyBatisLogPluginpreparing" value="Preparing:" />
+    <property name="MyBatisLogPluginrunning" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\AhydProject_Spring\src\main\webapp\png" />
+      <recent name="F:\AhydProject_Spring\src\main\webapp" />
+      <recent name="F:\AhydProject_Spring\src\main\java\cn\edu\guet\controller" />
+      <recent name="F:\AhydProject_Spring\src\main\java\cn\edu\guet\util" />
+      <recent name="F:\AhydProject_Spring\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Guet_Spring\src\main\webapp" />
+      <recent name="F:\AhydProject_Spring\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.edu.guet.bean" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="openRunningConfigInTab" value="true" />
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.56">
+    <configuration name="Generator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.edu.guet.util.Generator" />
+      <module name="Guet_Spring" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.edu.guet.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 9.0.56" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.56" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/login.html" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Guet_Spring:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="ac43c353-7ed2-4d59-a65d-7a33d510322b" />
+        <option name="DEPLOY_TOMCAT_APPS" value="true" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="12662" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Guet_Spring:war" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Generator" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.56" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Generator" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\Administrator\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="77272ff9-72ae-472a-8b39-1585fecd1d9b" name="Default Changelist" comment="" />
+      <created>1599269536507</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599269536507</updated>
+      <workItem from="1599269541544" duration="23712000" />
+      <workItem from="1599308555490" duration="1268000" />
+      <workItem from="1599312059261" duration="10174000" />
+      <workItem from="1599365270200" duration="2778000" />
+      <workItem from="1599377357994" duration="24000" />
+      <workItem from="1599450688765" duration="3878000" />
+      <workItem from="1684413115734" duration="445000" />
+      <workItem from="1684414053842" duration="3358000" />
+      <workItem from="1684421341350" duration="806000" />
+      <workItem from="1684463081137" duration="61000" />
+      <workItem from="1684595542151" duration="71000" />
+      <workItem from="1684631160343" duration="9310000" />
+      <workItem from="1684656935529" duration="6423000" />
+      <workItem from="1684683740453" duration="574000" />
+      <workItem from="1684744832916" duration="1006000" />
+      <workItem from="1684745943231" duration="352000" />
+      <workItem from="1684810985380" duration="21000" />
+      <workItem from="1684814427775" duration="98000" />
+      <workItem from="1684824408866" duration="657000" />
+      <workItem from="1684841640329" duration="2888000" />
+      <workItem from="1684919062912" duration="4362000" />
+      <workItem from="1684927855690" duration="1027000" />
+      <workItem from="1684928935400" duration="5179000" />
+      <workItem from="1684982449660" duration="4573000" />
+      <workItem from="1684999207366" duration="5821000" />
+      <workItem from="1685013908096" duration="1012000" />
+      <workItem from="1685015134801" duration="7760000" />
+      <workItem from="1685107523689" duration="445000" />
+      <workItem from="1685151913912" duration="1013000" />
+      <workItem from="1685152975797" duration="5926000" />
+      <workItem from="1685198807828" duration="1930000" />
+      <workItem from="1685203706190" duration="86000" />
+      <workItem from="1685258177597" duration="3304000" />
+      <workItem from="1685278519934" duration="1278000" />
+      <workItem from="1685348916459" duration="1939000" />
+      <workItem from="1685358488912" duration="3067000" />
+      <workItem from="1685418335729" duration="6451000" />
+      <workItem from="1685434641312" duration="1688000" />
+      <workItem from="1685447008387" duration="1301000" />
+      <workItem from="1685448331415" duration="295000" />
+      <workItem from="1685448648668" duration="90000" />
+      <workItem from="1685448751823" duration="5349000" />
+      <workItem from="1685498399662" duration="142000" />
+      <workItem from="1685505358903" duration="1694000" />
+      <workItem from="1685517824854" duration="1606000" />
+      <workItem from="1685610933096" duration="883000" />
+      <workItem from="1685611843942" duration="1046000" />
+      <workItem from="1685613601314" duration="750000" />
+      <workItem from="1685708470239" duration="1991000" />
+      <workItem from="1685759936419" duration="1876000" />
+      <workItem from="1685776281449" duration="2511000" />
+      <workItem from="1685779599403" duration="3683000" />
+      <workItem from="1685791330315" duration="3583000" />
+      <workItem from="1685804201008" duration="2911000" />
+      <workItem from="1685810604549" duration="3142000" />
+      <workItem from="1685852205455" duration="5932000" />
+      <workItem from="1685870276314" duration="17000" />
+      <workItem from="1685871396440" duration="2152000" />
+      <workItem from="1685883369790" duration="1489000" />
+      <workItem from="1685897355289" duration="613000" />
+      <workItem from="1685959710479" duration="118000" />
+      <workItem from="1686100247694" duration="768000" />
+      <workItem from="1686101920221" duration="864000" />
+      <workItem from="1686102889507" duration="32000" />
+      <workItem from="1686103353280" duration="503000" />
+      <workItem from="1686105813452" duration="600000" />
+      <workItem from="1686116216037" duration="11410000" />
+      <workItem from="1686138782605" duration="5172000" />
+      <workItem from="1686154500252" duration="14000" />
+      <workItem from="1686206684868" duration="106000" />
+      <workItem from="1686212711658" duration="544000" />
+      <workItem from="1686379261965" duration="24847000" />
+      <workItem from="1686467914576" duration="7416000" />
+      <workItem from="1686758628910" duration="3546000" />
+      <workItem from="1686800268622" duration="758000" />
+      <workItem from="1686809395119" duration="1786000" />
+      <workItem from="1687687888771" duration="28000" />
+      <workItem from="1687706865845" duration="2227000" />
+      <workItem from="1687755719783" duration="247000" />
+      <workItem from="1687779245902" duration="24000" />
+      <workItem from="1687781299810" duration="606000" />
+      <workItem from="1687782688897" duration="2226000" />
+      <workItem from="1687786203787" duration="93000" />
+      <workItem from="1687835259917" duration="8000" />
+      <workItem from="1687878132906" duration="617000" />
+      <workItem from="1687939273645" duration="14673000" />
+      <workItem from="1688034859739" duration="7838000" />
+      <workItem from="1688124805426" duration="1389000" />
+      <workItem from="1688640231760" duration="258000" />
+      <workItem from="1688691833508" duration="2776000" />
+      <workItem from="1688713259736" duration="1427000" />
+      <workItem from="1688737176481" duration="707000" />
+      <workItem from="1688777517413" duration="16821000" />
+      <workItem from="1688965776604" duration="1523000" />
+      <workItem from="1688970886497" duration="951000" />
+      <workItem from="1688982327032" duration="138000" />
+      <workItem from="1689303968749" duration="4907000" />
+      <workItem from="1689317972563" duration="9129000" />
+      <workItem from="1689332858473" duration="997000" />
+      <workItem from="1689383845567" duration="6139000" />
+      <workItem from="1689390790573" duration="3304000" />
+      <workItem from="1689404464775" duration="8448000" />
+      <workItem from="1689413014348" duration="1957000" />
+      <workItem from="1689415008153" duration="8000" />
+      <workItem from="1689493999252" duration="2165000" />
+      <workItem from="1689511419399" duration="818000" />
+      <workItem from="1689516891153" duration="914000" />
+      <workItem from="1689555472577" duration="2985000" />
+      <workItem from="1689583755489" duration="395000" />
+      <workItem from="1689584207590" duration="2958000" />
+      <workItem from="1689588502036" duration="68000" />
+      <workItem from="1689588737553" duration="163000" />
+      <workItem from="1689642596265" duration="4760000" />
+      <workItem from="1689650158394" duration="5367000" />
+      <workItem from="1689666461025" duration="69000" />
+    </task>
+    <task id="LOCAL-00001" summary="第一次提交&#10;已经实现：&#10;1、新增工单&#10;2、工单号自增">
+      <created>1685613682904</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1685613682904</updated>
+    </task>
+    <task id="LOCAL-00002" summary="用MybatisGenerator实现保存并分析方法">
+      <created>1687957344387</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1687957344387</updated>
+    </task>
+    <task id="LOCAL-00003" summary="完善了根据创建时间查询的BUG">
+      <created>1688040191796</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1688040191796</updated>
+    </task>
+    <task id="LOCAL-00004" summary="完善了根据创建时间查询的BUG">
+      <created>1688041829188</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1688041829188</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="Hgs_MyBatis" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="ee84111b-b150-4f15-a33f-26db6fb9863f">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="第一次提交&#10;已经实现：&#10;1、新增工单&#10;2、工单号自增" />
+    <MESSAGE value="用MybatisGenerator实现保存并分析方法" />
+    <MESSAGE value="完善了根据创建时间查询的BUG" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善了根据创建时间查询的BUG" />
+  </component>
+</project>

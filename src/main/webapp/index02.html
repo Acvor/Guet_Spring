@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>后端管理</title>
+    <link rel="stylesheet" href="../css/side.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script>
+        $(function(){
+            $(".menu>li a").click(function(){
+                $(this).next().toggle(300);
+                $(this).parent().siblings().children(".submenu").hide(300);
+            })
+        })
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #wrapper{
+            display: flex;
+            flex-direction: column;
+            height: 1000px;
+        }
+        #top{
+            flex: 1;
+            border-bottom: 1px solid ;
+        }
+        #main{
+            flex: 9;
+            display: flex;
+            flex-direction: row;
+        }
+        #aside{
+            flex: 2;
+            border: 1px solid gray;
+         }
+        #article{
+            flex: 8;
+        }
+    </style>
+</head>
+<body>
+    <!--弹性布局(子元素如何分布)-->
+    <div id="wrapper">
+        <div id="top">
+            top
+        </div>
+        <div id="main">
+            <div id="aside">
+                <ul class="menu">
+                    <li>
+                        <a href="#"><i class="fa fa-home"></i>首页</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-user"></i>用户管理</a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="#">用户列表</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-user-o"></i>角色管理</a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="#">角色列表</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-bus"></i>权限管理</a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="#">权限列表</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-book"></i>文章管理</a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="#">文章列表</a>
+                            </li>
+                            <li>
+                                <a href="#">文章分类</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-user-o"></i>轮播图管理</a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="#">轮播图列表</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-file-zip-o"></i>新闻管理</a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="publishNews.html" target="content">发布新闻</a>
+                            </li>
+                            <li>
+                                <a href="guet.html">进入官网</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div id="article">
+                <iframe src="" frameborder="0" width="100%" height="100%" name="content">
+
+                </iframe>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
